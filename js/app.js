@@ -5,9 +5,7 @@ function addTask() {
     if (inputBox.value.trim() === '') {
         alert('Please enter a task!');
         return;
-    }
-
-    else {
+    } else {
         let li = document.createElement('li');
         li.textContent = inputBox.value;
 
@@ -30,3 +28,10 @@ function addTask() {
         inputBox.value = '';
     }
 }
+
+// Добавляем обработчик события keydown на поле ввода
+inputBox.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        addTask();  // Вызываем функцию добавления задачи
+    }
+});
