@@ -181,6 +181,16 @@ main {
     padding: 1rem 3rem;
 }
 
+.row button:hover {
+    background: #e86d64 !important;
+    transition: all 0.3s ease;
+}
+
+.row button:active {
+    background: #fa1201 !important;
+    transition: all 0.3s ease;
+}
+
 .todo-app ul li {
     list-style: none;
     font-size: 1rem;
