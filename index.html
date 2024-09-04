@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ToDo App">
+    <meta name="author" content="Daniil Ustinov">
+    <link rel="icon" href="img/checked.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>ToDo App</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="header-nav">
+
+                <div class="nav-logo">
+                    <a href="https://github.com/acuraels">
+                        <img class="header-img" src="img/logo.svg" alt="Logo">
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="link">
+                        <p>Welcome!</p>
+                    </li>
+                </ul>
+
+                <a class="btn-nav" href=https://github.com/acuraels?tab=repositories">See my other projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="todo-app">
+                <div class="title">
+                    <h1>To-Do List</h2>
+                        <img src="img/icon.png" alt=" Icon">
+                </div>
+
+                <div class="row">
+                    <input type="text" class="input-box" placeholder="Add your text">
+                    <button class="input-btn" onclick="addTask()">Add</button>
+                </div>
+
+                <ul class="list-container">
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p class="copyright-text">Created by Daniil Ustinov 2024 ©</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

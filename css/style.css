@@ -1,0 +1,303 @@
+/* Общие стили*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+img {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #b47b20, #4e085f);
+
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-container {
+    background-color: #222222;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav {
+    max-width: 75rem;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo {
+    max-width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link p {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: auto;
+
+    padding-top: 0.85rem;
+    padding-left: 9rem;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn-nav {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #5a77c8;
+}
+
+.btn-nav:active {
+    background-color: #092675;
+}
+
+main {
+    background: linear-gradient(135deg, #204a9f, #7d1099);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 33.75rem;
+    background: #fff;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #ac5a1f, #c5bf17);
+
+
+    margin: 120px auto 20px;
+    padding: 20px 30px 70px;
+}
+
+.todo-app h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 3.9375rem;
+    color: #fff;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    margin-bottom: 2rem;
+}
+
+.todo-app img {
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.title {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 1.5rem;
+
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.input-box {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 1rem;
+
+    padding: 0.8rem;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 2.5rem;
+    background: #ff5645;
+    color: #fff;
+
+    padding: 1rem 3rem;
+}
+
+.todo-app ul li {
+    list-style: none;
+    font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+    color: #ffffff;
+    position: relative;
+
+    padding: 12px 8px 12px 50px;
+}
+
+.todo-app ul li::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(../img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    top: 12px;
+    left: 8px;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #ff5645;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.todo-app ul li.checked {
+    color: #b9b9b9;
+    text-decoration: line-through;
+}
+
+.todo-app ul li.checked::before {
+    background-image: url(../img/checked.png);
+
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #191919;
+}
+
+.footer-container {
+    text-align: center;
+    background-color: #191919;
+    padding: 2.65rem;
+}
+
+.copyright-text {
+    color: #C5C5C5;
+    opacity: 50%;
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link p {
+        padding-left: 0rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .btn-nav {
+        padding: 0.75rem 1rem;
+    }
+
+    .main-container {
+        min-height: 76vh;
+    }
+
+    .todo-app {
+        width: 75vw;
+        margin-bottom: 2rem;
+    }
+
+    .todo-app h1 {
+        font-size: 2rem;
+    }
+
+    .todo-app img {
+        margin-top: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .row {
+        width: auto;
+    }
+
+    .row button {
+        padding: 0.8rem 1rem;
+        width: 30%;
+    }
+}
