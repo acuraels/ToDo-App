@@ -205,6 +205,7 @@ main {
 }
 
 .input-box {
+    width: 75%;
     border: none;
     outline: none;
     background: transparent;
@@ -367,6 +368,10 @@ footer {
 
     .row {
         width: auto;
+    }
+
+    .input-box {
+        max-width: 75%;
     }
 
     .row button {
