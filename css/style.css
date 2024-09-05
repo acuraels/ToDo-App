@@ -41,15 +41,56 @@ header {
 nav {
     max-width: 75rem;
     margin: auto;
-    padding: 2rem 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 2rem;
+
+    padding: 2rem 1rem;
 }
 
-.nav-logo {
-    max-width: 100px;
+/* Стили для бургер-кнопки */
+.burger-menu {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
 }
+
+.burger-line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Скрытое меню */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 5.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
 
 .nav-links {
     display: flex;
@@ -65,10 +106,13 @@ nav {
 
     font-weight: 600;
     font-size: 0.9375rem;
-    line-height: auto;
 
     padding-top: 0.85rem;
-    padding-left: 11rem;
+    padding-left: 11.5rem;
+}
+
+.link-rus {
+    padding-left: 9rem !important;
 }
 
 .link a::after {
@@ -274,6 +318,15 @@ footer {
     .link p {
         padding-left: 0rem;
     }
+
+    .link-rus {
+        padding-left: 0rem !important;
+    }
+
+    .dropdown-menu {
+        left: 7.1rem;
+        top: 5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -298,8 +351,16 @@ footer {
         font-size: 1.4rem;
     }
 
+    .title-rus {
+        font-size: 2rem !important;
+    }
+
+    .img-rus {
+        margin-top: 2.7rem !important;
+    }
+
     .todo-app img {
-        margin-top: 0.5rem;
+        margin-top: 0.7rem;
         width: 2.5rem;
         height: 2.5rem;
     }
