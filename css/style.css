@@ -244,7 +244,7 @@ main {
     color: #ffffff;
     position: relative;
 
-    padding: 12px 8px 12px 50px;
+    padding: 12px 40px 12px 50px;
 }
 
 .todo-app ul li::before {
@@ -303,10 +303,18 @@ footer {
 }
 
 .copyright-text {
+    display: flex;
+    justify-content: center;
     color: #C5C5C5;
     opacity: 50%;
     font-weight: 300;
     font-size: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+    .todo-app {
+        margin-bottom: 120px;
+    }
 }
 
 @media (max-width: 1024px) {
